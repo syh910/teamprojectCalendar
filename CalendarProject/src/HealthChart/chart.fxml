@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <HBox layoutX="10.0" layoutY="50.0" prefHeight="356.0" prefWidth="465.0">
+         <children>
+            <AreaChart prefHeight="400.0" prefWidth="450.0">
+              <!-- x축 카테고리 -->
+              <xAxis>
+                <NumberAxis label="MM:dd" side="BOTTOM" />
+              </xAxis>
+              <!-- y축 카테고리 -->
+              <yAxis>
+                <NumberAxis fx:id="weight" side="LEFT" />
+              </yAxis>
+            </AreaChart>
+         </children>
+      </HBox>
+      <Label layoutX="283.0" layoutY="8.0" text="체중관리">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <HBox layoutX="10.0" layoutY="406.0" prefHeight="85.0" prefWidth="465.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="117.0" text="식단기록" />
+            <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="117.0" text="체중기록" />
+            <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="117.0" text="Home" />
+            <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="117.0" text="홈트영상" />
+         </children>
+      </HBox>
+      <Separator layoutX="475.0" layoutY="63.0" orientation="VERTICAL" prefHeight="429.0" prefWidth="12.0" />
+      <AnchorPane layoutX="481.0" layoutY="64.0" prefHeight="436.0" prefWidth="219.0">
+         <children>
+            <Label layoutX="34.0" layoutY="39.0" text="일일 체중기록">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="82.0" layoutY="110.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="기록" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
