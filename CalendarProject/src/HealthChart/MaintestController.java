@@ -12,9 +12,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class healthListController implements Initializable {
- 
-	   @FXML private Button goBack;	//뒤로가기버튼
+public class MaintestController implements Initializable{
+
+	  
 	   @FXML private Button food;	//식단관리버튼
 	   @FXML private Button chart;	//체중관리버튼
 	   @FXML private Button HT;		//홈트영상버튼
@@ -23,21 +23,11 @@ public class healthListController implements Initializable {
 	   
 	   @Override
 	   public void initialize(URL location, ResourceBundle resources) {
-		   goBack.setOnAction(e->btngoBack(e));
 		   food.setOnAction(e->btnfood(e));
 		   chart.setOnAction(e->btnchart(e));
 		   HT.setOnAction(e->btnHT(e));
 		   home.setOnAction(e->btnhome(e));
- 
-	   }
-  
-	   public void btngoBack(ActionEvent event) {   
-		   try {
-		      Parent foodPicker = FXMLLoader.load(getClass().getResource("chart.fxml"));
-		      Scene scene = new Scene(foodPicker);
-		      Stage primaryStage= (Stage)goBack.getScene().getWindow();
-		      primaryStage.setScene(scene);
-		   } catch (Exception e) {}
+
 	   }
 	   
 	   //식단관리
@@ -76,5 +66,4 @@ public class healthListController implements Initializable {
 		     primaryStage.setScene(scene);
 		  } catch (Exception e) {}
 	   }
-	   
 }

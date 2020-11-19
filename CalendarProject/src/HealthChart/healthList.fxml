@@ -6,7 +6,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="480.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HealthChart.healthListController">
+<AnchorPane prefHeight="500.0" prefWidth="480.0" xmlns:fx="http://javafx.com/fxml/1" 
+			fx:controller="HealthChart.healthListController">
    <children>
       <Label layoutX="164.0" layoutY="15.0" text="일일 체중기록">
          <font>
@@ -32,10 +33,10 @@
          <children>
             <HBox prefHeight="85.0" prefWidth="465.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="116.0" text="식단기록" />
-                  <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="116.0" text="체중기록" />
-                  <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="116.0" text="Home" />
-                  <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="116.0" text="홈트영상" />
+                  <Button fx:id="food" prefHeight="85.0" prefWidth="116.0" text="식단기록" />
+                  <Button fx:id="chart" prefHeight="85.0" prefWidth="116.0" text="체중기록" />
+                  <Button fx:id="home" prefHeight="85.0" prefWidth="116.0" text="Home" />
+                  <Button fx:id="HT" prefHeight="85.0" prefWidth="116.0" text="홈트영상" />
                </children>
             </HBox>
          </children>
