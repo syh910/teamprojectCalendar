@@ -1,4 +1,4 @@
-package HealthChart;
+package HealthSchedule;
 
 import java.net.URL;
 import java.util.ResourceBundle;

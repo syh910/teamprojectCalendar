@@ -1,4 +1,4 @@
-package HealthChart;
+package HealthSchedule;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

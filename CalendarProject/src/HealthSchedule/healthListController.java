@@ -1,4 +1,4 @@
-package HealthChart;
+package HealthSchedule;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -9,44 +9,35 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.AreaChart;
-import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class healthChartController implements Initializable {
-
-	   @FXML private Button healthLog;	//기록버튼
+public class healthListController implements Initializable {
+ 
+	   @FXML private Button goBack;	//뒤로가기버튼
 	   @FXML private Button food;	//식단관리버튼
 	   @FXML private Button chart;	//체중관리버튼
 	   @FXML private Button HT;		//홈트영상버튼
 	   @FXML private Button home;	//홈버튼
-	   @FXML private NumberAxis weight;
-	   @FXML private TextField challenge;	//목표체중 텍스트필드
-	   @FXML private AreaChart<String, Number> areachart;
+	   
 	   
 	   @Override
 	   public void initialize(URL location, ResourceBundle resources) {
-		   //버튼액션추가
-		   healthLog.setOnAction(e->btnhealthlog(e));
+		   goBack.setOnAction(e->btngoBack(e));
 		   food.setOnAction(e->btnfood(e));
 		   chart.setOnAction(e->btnchart(e));
 		   HT.setOnAction(e->btnHT(e));
 		   home.setOnAction(e->btnhome(e));
-		   
+ 
 	   }
-	   
-	   //뒤로가기
-	   public void btnhealthlog(ActionEvent event) {
-	      try {
-	    	 //끌어오는 주소는 페이지를 전환할 fxml명
-	    	 //fxml마다 컨트롤러를 주니 한 컨트롤러에서 여러 fxml을 잡지는 말자
-	         Parent Log = FXMLLoader.load(getClass().getResource("healthList.fxml"));
-	         Scene scene = new Scene(Log);
-	         Stage primaryStage= (Stage)healthLog.getScene().getWindow();
-	         primaryStage.setScene(scene);
-	      } catch (Exception e) {}
+  
+	   public void btngoBack(ActionEvent event) {   
+		   try {
+		      Parent foodPicker = FXMLLoader.load(getClass().getResource("chart.fxml"));
+		      Scene scene = new Scene(foodPicker);
+		      Stage primaryStage= (Stage)goBack.getScene().getWindow();
+		      primaryStage.setScene(scene);
+		   } catch (Exception e) {}
 	   }
 	   
 	   //식단관리
