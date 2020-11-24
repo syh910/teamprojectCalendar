@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class healthListController implements Initializable {
@@ -19,6 +20,8 @@ public class healthListController implements Initializable {
 	   @FXML private Button chart;	//체중관리버튼
 	   @FXML private Button HT;		//홈트영상버튼
 	   @FXML private Button home;	//홈버튼
+	   @FXML private TextField challenge1;	//목표체중
+	   
 	   
 	   
 	   @Override
@@ -28,9 +31,11 @@ public class healthListController implements Initializable {
 		   chart.setOnAction(e->btnchart(e));
 		   HT.setOnAction(e->btnHT(e));
 		   home.setOnAction(e->btnhome(e));
+		   
+		   
  
 	   }
-  
+	   
 	   public void btngoBack(ActionEvent event) {   
 		   try {
 		      Parent foodPicker = FXMLLoader.load(getClass().getResource("chart.fxml"));
